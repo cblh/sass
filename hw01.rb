@@ -9,8 +9,6 @@ def sum ary
 end
 
 def max_2_sum ary
-  return 0 if ary.empty?
-  return ary[0] if ary.length == 1
   return sum ary.sort.last 2
 end
 
