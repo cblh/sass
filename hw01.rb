@@ -10,13 +10,8 @@ end
 
 def max_2_sum ary
   return 0 if ary.empty?
-  return ary if ary.length == 1
-  ary.sort!
-  sum = 0
-  ary.last(2).each do |arg|
-    sum += arg.to_i
-  end
-  sum
+  return ary[0] if ary.length == 1
+  return sum ary.sort.last 2
 end
 
 def sum_to_n? ary, n
@@ -31,5 +26,9 @@ def sum_to_n? ary, n
 end
 
 puts sum ["a", 2, 2, 3]
-puts max_2_sum [1, 9, 2]
+
+puts max_2_sum([1, 9, 2]) == 11
+puts max_2_sum([]) == 0
+puts max_2_sum([1]) == 1
+
 puts sum_to_n?([3], 1)

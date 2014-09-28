@@ -1,10 +1,10 @@
 class BookInStock
-  attr_accessor :price, :numberISBN
-  def initialize(numberISBN, price)
-    if numberISBN.empty? or price <= 0
+  attr_accessor :price, :isbn
+  def initialize(isbn, price)
+    if isbn.empty? or price <= 0
       raise ArgumentError
     else
-      @numberISBN = numberISBN
+      @isbn = isbn
       @price = price
     end
 
